@@ -39,8 +39,8 @@
 </div>
 
 <div class="p-3 mb-2 bg-secondary" id="demo-div">
-<p style="margin-top:1rem;">Num. of datapoints:
-	<span class="badge badge-warning" id="raw-data">0</span>
+<p style="margin-top:1rem;" id = "raw-data">Data:
+	
 </p>
 </div>
 
@@ -62,7 +62,7 @@ function incrementEventCount(){
 function updateFieldIfNotNull(fieldName, value, precision=10){
   if (value != null)
     document.getElementById(fieldName).innerHTML = value.toFixed(precision);
-	document.getElementById('raw-data').innerHTML = document.getElementById('raw-data').innerHTML + '\n' + fieldName + ':' + value.toFixed(precision);
+    document.getElementById('raw-data').innerHTML = document.getElementById('raw-data').innerHTML + '\n' + fieldName + ':' + value.toFixed(precision);
 }
 
 function handleMotion(event) {
